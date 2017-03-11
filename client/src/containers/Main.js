@@ -3,7 +3,7 @@ import ReactGA from 'react-ga';
 import '../styles/containers/Main.css';
 
 import Header from '../components/Header'
-//import News from './News'
+import News from './News'
 
 import trackingID from '../secrets/ga'
 ReactGA.initialize(trackingID);
@@ -22,6 +22,7 @@ class Main extends Component {
     return (
       <div className="main">
         <Header />
+        <News />
       </div>
     );
   }

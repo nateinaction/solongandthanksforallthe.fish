@@ -1,5 +1,6 @@
-const setMessage = (message) => ({
+const setMessage = (subreddit, message) => ({
 	type: 'SET_MESSAGE',
+	subreddit,
 	message
 })
 

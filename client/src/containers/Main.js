@@ -28,4 +28,17 @@ class Main extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+	firebase: state.firebase
+})
+
+const mapDispatchToProps = (dispatch) => ({
+
+})
+
+const MainContainer = connect(
+  mapStateToProps,
+	mapDispatchToProps
+)(Main)
+
 export default Main;

@@ -8,7 +8,7 @@ const fetchSubreddit = (subreddit) => (
   (dispatch) => {
     dispatch(setFetching(subreddit))
 
-    const url = `https://www.reddit.com/r/${subreddit}/new.json?sort=hot`
+    const url = `https://www.reddit.com/r/${subreddit}/new.json`
     const config = {
       params: {
         sort: 'hot'
@@ -20,7 +20,7 @@ const fetchSubreddit = (subreddit) => (
 			))
 		  .catch(err => {
 				if (err) console.log(err)
-		  	return dispatch(setMessage('Unable to connect to Reddit. Please check your internet connection.'))
+		  	return dispatch(setMessage(subreddit, 'Unable to connect to Reddit. Please check your internet connection.'))
 		  });
   }
 )

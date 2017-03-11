@@ -1,4 +1,4 @@
-const helper = (state, action) {
+const helper = (state, action) => {
 	const message = action.message || ''
 	const posts = action.posts || []
 	const fetching = (posts.length === 0 && message.length === 0)

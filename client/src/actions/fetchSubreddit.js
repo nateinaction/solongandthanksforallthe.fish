@@ -16,7 +16,7 @@ const fetchSubreddit = (subreddit) => (
     }
     return axios(url, config)
 			.then(res => (
-				dispatch(setSubreddit(subreddit, res.data.children))
+				dispatch(setSubreddit(subreddit, res.data.data.children))
 			))
 		  .catch(err => {
 				if (err) console.log(err)

@@ -5,7 +5,7 @@ import '../styles/components/Header.css'
 import dolphin from '../../public/dolphin.svg'
 
 
-const Splash = (props) => (
+const Header = (props) => (
   <Row className='header'>
     <Col xs={12} className='no-padding'>
       <Image src={dolphin} responsive />
@@ -13,4 +13,4 @@ const Splash = (props) => (
   </Row>
 )
 
-export default Splash
+export default Header

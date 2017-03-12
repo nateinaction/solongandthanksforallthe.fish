@@ -8,7 +8,7 @@ const fetchSubreddit = (subreddit) => (
   (dispatch) => {
     dispatch(setFetching(subreddit))
 
-    const url = `https://www.reddit.com/r/${subreddit}/new.json`
+    const url = `https://www.reddit.com/r/${subreddit}/hot.json`
     const config = {
       params: {
         sort: 'hot'

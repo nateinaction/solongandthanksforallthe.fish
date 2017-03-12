@@ -2,7 +2,7 @@ import React from 'react';
 import {Row, Col, Image} from 'react-bootstrap';
 
 import '../styles/components/Header.css'
-import dolphin from '../../public/dolphin.svg'
+import dolphin from '../../public/images/dolphin.svg'
 
 
 const Header = (props) => (

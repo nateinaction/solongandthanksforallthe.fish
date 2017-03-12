@@ -4,23 +4,35 @@ import { Grid } from 'react-bootstrap';
 import '../styles/containers/News.css';
 
 import fetchSubreddit from '../actions/fetchSubreddit'
-//import Science from '../components/Science'
+import NewsSection from '../components/NewsSection'
 
 const sections = [
-  'science'
+  {
+    title: 'Environment',
+    subreddit: 'environment'
+  },
+  {
+    title: 'Science',
+    subreddit: 'science'
+  },
 ]
 
 class News extends Component {
   componentDidMount() {
-    sections.forEach((section) => {
-      this.props.fetchSubreddit(section)
-    })
+
   }
 
   render() {
     return (
       <Grid className="news">
-
+        {sections.map((section, index) => (
+          <NewsSection
+            key={index}
+            title={section.title}
+            subreddit={section.subreddit}
+            subreddits={this.props.subreddits}
+            fetchSubreddit={this.props.fetchSubreddit} />
+        ))}
       </Grid>
     );
   }

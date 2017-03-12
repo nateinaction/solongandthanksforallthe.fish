@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
-import { Row, Col, Image } from 'react-bootstrap';
+import { Row, Col, Thumbnail } from 'react-bootstrap';
+import moment from 'moment'
 
 import '../styles/components/NewsItem.css'
 import redditSelf from '../../public/images/reddit-self.png';
@@ -15,17 +16,17 @@ const getThumbnail = (src) => {
 }
 
 const getDate = (epoch) => (
-  new Date(epoch * 1000).toString()
+  moment.utc(epoch * 1000).fromNow()
 )
 
 const NewsItem = (props) => (
   <Row className='news-item' >
     <Col xs={12} md={2}>
-      <Image src={getThumbnail(props.thumbnail)} href={props.url} className='center-block' responsive />
+      <Thumbnail src={getThumbnail(props.thumbnail)} href={props.url} className='center-block' responsive />
     </Col>
     <Col xs={12} md={10}>
       <p className='title'><a href={props.url}>{props.title}</a></p>
-      <p><span className='date'>{getDate(props.date)}</span>{' - '}<a className='discussion' href={'https://www.reddit.com' + props.discussion}>Discussion ({props.numComments})</a></p>
+      <p><span className='date'>{'Posted ' + getDate(props.date)}</span>{' - '}<a className='discussion' href={'https://www.reddit.com' + props.discussion}>Discussion ({props.numComments})</a></p>
     </Col>
   </Row>
 )

@@ -22,7 +22,7 @@ const getDate = (epoch) => (
 const NewsItem = (props) => (
   <Row className='news-item' >
     <Col xs={12} md={2}>
-      <Thumbnail src={getThumbnail(props.thumbnail)} href={props.url} className='center-block' responsive />
+      <Thumbnail src={getThumbnail(props.thumbnail)} href={props.url} className='center-block' />
     </Col>
     <Col xs={12} md={10}>
       <p className='title'><a href={props.url}>{props.title}</a></p>

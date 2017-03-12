@@ -1,4 +1,5 @@
 .main {
   text-align: center;
   background-color: #428ebd;
+  overflow: hidden;
 }

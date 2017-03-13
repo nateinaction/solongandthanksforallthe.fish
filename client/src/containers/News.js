@@ -8,12 +8,28 @@ import NewsSection from '../components/NewsSection'
 
 const sections = [
   {
+    title: 'Science',
+    subreddit: 'science'
+  },
+  {
+    title: 'Space',
+    subreddit: 'space'
+  },
+  {
     title: 'Environment',
     subreddit: 'environment'
   },
   {
-    title: 'Science',
-    subreddit: 'science'
+    title: 'Ask Science',
+    subreddit: 'askscience'
+  },
+  {
+    title: 'Photos of Earth',
+    subreddit: 'earthporn'
+  },
+  {
+    title: 'Humor',
+    subreddit: 'funny'
   },
 ]
 

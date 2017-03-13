@@ -3,11 +3,11 @@ import { Row, Col, Thumbnail } from 'react-bootstrap';
 import moment from 'moment'
 
 import '../styles/components/NewsItem.css'
-import redditSelf from '../../public/images/reddit-self.png';
-import redditDefault from '../../public/images/reddit-default.png';
+import redditSelf from '../../public/images/reddit-self.svg';
+import redditDefault from '../../public/images/reddit-default.svg';
 
 const getThumbnail = (src) => {
-  if (src === 'self') {
+  if (src === 'self' || src === '') {
     return redditSelf
   } else if (src === 'default') {
     return redditDefault

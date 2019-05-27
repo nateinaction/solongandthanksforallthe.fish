@@ -25,8 +25,13 @@ const NewsItem = (props) => (
       <Thumbnail src={getThumbnail(props.thumbnail)} href={props.url} className='center-block' />
     </Col>
     <Col xs={12} md={10}>
-      <p className='title'><a href={props.url}>{props.title}</a></p>
-      <p><span className='date'>{'Posted ' + getDate(props.date)}</span>{' - '}<a className='discussion' href={'https://www.reddit.com' + props.discussion}>Discussion ({props.numComments})</a></p>
+      <p className='title'><a target='_blank' href={props.url}>{props.title}</a></p>
+      <p>
+        <span className='date'>{'Posted ' + getDate(props.date)}</span>{' - '}
+        <a className='discussion' target='_blank' href={'https://www.reddit.com' + props.discussion}>
+          Discussion ({props.numComments})
+        </a>
+      </p>
     </Col>
   </Row>
 )

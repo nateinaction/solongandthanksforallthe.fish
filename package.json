@@ -1,31 +1,45 @@
 {
   "name": "public",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://solongandthanksforallthe.fish",
   "private": true,
   "devDependencies": {
-    "gh-pages": "^0.12.0",
-    "react-scripts": "0.9.5"
+    "gh-pages": "^2.0.1",
+    "react-scripts": "^3.0.1"
   },
   "dependencies": {
-    "axios": "^0.15.3",
-    "moment": "^2.17.1",
-    "react": "^15.4.2",
-    "react-bootstrap": "^0.30.8",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.3",
-    "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0"
+    "axios": "^0.18.0",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^0.32",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "node_modules/.bin/react-scripts start",
+    "build": "node_modules/.bin/react-scripts build",
+    "lint": "node_modules/.bin/eslint ./src",
+    "lintfix": "node_modules/.bin/eslint --fix ./src",
+    "test": "node_modules/.bin/react-scripts test --env=jsdom",
+    "eject": "node_modules/.bin/react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "node_modules/.bin/gh-pages -d build"
   },
   "bugs": {
     "url": "https://github.com/nateinaction/solongandthanksforallthe.fish/issues"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

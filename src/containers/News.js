@@ -54,10 +54,10 @@ class News extends Component {
   }
 }
 
-News.propTypes = {
-  subreddits: PropTypes.object.isRequired,
-  fetchSubreddit: PropTypes.func.isRequired
-}
+// News.propTypes = {
+//   subreddits: PropTypes.object.isRequired,
+//   fetchSubreddit: PropTypes.func.isRequired
+// }
 
 const mapStateToProps = (state) => ({
   subreddits: state.subreddits

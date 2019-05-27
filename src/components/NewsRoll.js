@@ -48,8 +48,8 @@ class NewsRoll extends Component {
   }
 }
 
-NewsRoll.propTypes = {
-  subreddit: PropTypes.object
-}
+// NewsRoll.propTypes = {
+//   subreddit: PropTypes.object
+// }
 
 export default NewsRoll

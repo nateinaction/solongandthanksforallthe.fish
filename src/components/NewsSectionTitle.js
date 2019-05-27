@@ -7,8 +7,8 @@ const NewsSectionTitle = (props) => (
   </Col>
 )
 
-NewsSectionTitle.propTypes = {
-  title: PropTypes.string.isRequired
-}
+// NewsSectionTitle.propTypes = {
+//   title: PropTypes.string.isRequired
+// }
 
 export default NewsSectionTitle;

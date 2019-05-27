@@ -3,8 +3,8 @@ import { Row, Col, Thumbnail } from 'react-bootstrap';
 import moment from 'moment'
 
 import '../styles/components/NewsItem.css'
-import redditSelf from '../../public/images/reddit-self.svg';
-import redditDefault from '../../public/images/reddit-default.svg';
+import redditSelf from '../images/reddit-self.svg';
+import redditDefault from '../images/reddit-default.svg';
 
 const getThumbnail = (src) => {
   if (src === 'self' || src === '') {
@@ -25,10 +25,10 @@ const NewsItem = (props) => (
       <Thumbnail src={getThumbnail(props.thumbnail)} href={props.url} className='center-block' />
     </Col>
     <Col xs={12} md={10}>
-      <p className='title'><a target='_blank' href={props.url}>{props.title}</a></p>
+      <p className='title'><a target='_blank' rel='noopener noreferrer' href={props.url}>{props.title}</a></p>
       <p>
         <span className='date'>{'Posted ' + getDate(props.date)}</span>{' - '}
-        <a className='discussion' target='_blank' href={'https://www.reddit.com' + props.discussion}>
+        <a className='discussion' target='_blank' rel='noopener noreferrer' href={'https://www.reddit.com' + props.discussion}>
           Discussion ({props.numComments})
         </a>
       </p>
@@ -36,13 +36,13 @@ const NewsItem = (props) => (
   </Row>
 )
 
-NewsItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  thumbnail: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  discussion: PropTypes.string.isRequired,
-  date: PropTypes.number.isRequired,
-  numComments: PropTypes.number.isRequired
-}
+// NewsItem.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   thumbnail: PropTypes.string.isRequired,
+//   url: PropTypes.string.isRequired,
+//   discussion: PropTypes.string.isRequired,
+//   date: PropTypes.number.isRequired,
+//   numComments: PropTypes.number.isRequired
+// }
 
 export default NewsItem

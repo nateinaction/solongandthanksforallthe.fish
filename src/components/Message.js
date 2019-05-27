@@ -7,8 +7,8 @@ const Message = (props) => (
   </Alert>
 )
 
-Message.propTypes =  {
-	message: PropTypes.string.isRequired
-}
+// Message.propTypes =  {
+// 	message: PropTypes.string.isRequired
+// }
 
 export default Message

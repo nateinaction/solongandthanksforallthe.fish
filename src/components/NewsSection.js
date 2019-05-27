@@ -21,11 +21,11 @@ class NewsSection extends Component {
   }
 }
 
-NewsSection.propTypes = {
-  title: PropTypes.string.isRequired,
-  subreddit: PropTypes.string.isRequired,
-  subreddits: PropTypes.object.isRequired,
-  fetchSubreddit: PropTypes.func.isRequired
-}
+// NewsSection.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   subreddit: PropTypes.string.isRequired,
+//   subreddits: PropTypes.object.isRequired,
+//   fetchSubreddit: PropTypes.func.isRequired
+// }
 
 export default NewsSection

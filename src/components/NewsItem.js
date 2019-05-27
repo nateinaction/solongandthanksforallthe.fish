@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Row, Col, Thumbnail } from 'react-bootstrap';
+import { Row, Col, Image } from 'react-bootstrap';
 import moment from 'moment'
 
 import '../styles/components/NewsItem.css'
@@ -22,7 +22,7 @@ const getDate = (epoch) => (
 const NewsItem = (props) => (
   <Row className='news-item' >
     <Col xs={12} md={2}>
-      <Thumbnail src={getThumbnail(props.thumbnail)} href={props.url} className='center-block' />
+      <Image src={getThumbnail(props.thumbnail)} href={props.url} className='center-block' thumbnail />
     </Col>
     <Col xs={12} md={10}>
       <p className='title'><a target='_blank' rel='noopener noreferrer' href={props.url}>{props.title}</a></p>

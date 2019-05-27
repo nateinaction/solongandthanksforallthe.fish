@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { Grid } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import '../styles/containers/News.css';
 
 import fetchSubreddit from '../actions/fetchSubreddit'
@@ -40,7 +40,7 @@ class News extends Component {
 
   render() {
     return (
-      <Grid className="news">
+      <Container className="news">
         {sections.map((section, index) => (
           <NewsSection
             key={index}
@@ -49,7 +49,7 @@ class News extends Component {
             subreddits={this.props.subreddits}
             fetchSubreddit={this.props.fetchSubreddit} />
         ))}
-      </Grid>
+      </Container>
     );
   }
 }

@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Container from 'react-bootstrap/Container';
-import '../styles/containers/News.css';
+import './News.css';
 
 import fetchSubreddit from '../actions/fetchSubreddit'
-import NewsSection from '../components/NewsSection'
+import NewsSection from './NewsSection'
 
 const sections = [
   {

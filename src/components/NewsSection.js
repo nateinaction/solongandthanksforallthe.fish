@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Row } from 'react-bootstrap';
 
-import '../styles/components/NewsSection.css'
+import './NewsSection.css'
 
 import NewsSectionTitle from './NewsSectionTitle'
 import NewsRoll from './NewsRoll'

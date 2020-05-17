@@ -2,7 +2,7 @@ import React from 'react';
 import Youtube from 'react-youtube'
 import {Row, Col, Image} from 'react-bootstrap';
 
-import '../styles/components/Splash.css'
+import './Splash.css'
 import dolphin from '../../public/dolphin.svg'
 
 const videoOpts = {

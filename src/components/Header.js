@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col, Image} from 'react-bootstrap';
 
-import '../styles/components/Header.css'
+import './Header.css'
 import dolphin from '../images/dolphin.svg'
 
 

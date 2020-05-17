@@ -4,17 +4,16 @@
   "homepage": "https://solongandthanksforallthe.fish",
   "private": true,
   "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.4.1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "moment": "^2.24.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.8",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3",
-    "redux": "^4.0.1",
+    "axios": "^0.19.2",
+    "moment": "^2.25.3",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
@@ -24,8 +23,8 @@
     "lintfix": "node_modules/.bin/eslint --fix ./src",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "node_modules/.bin/gh-pages -d build"
+    "preview": "wrangler publish",
+    "deploy": "wrangler publish -e production"
   },
   "bugs": {
     "url": "https://github.com/nateinaction/solongandthanksforallthe.fish/issues"

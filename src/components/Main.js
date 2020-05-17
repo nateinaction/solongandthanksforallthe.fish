@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../styles/containers/Main.css';
+import './Main.css';
 
-import Header from '../components/Header'
+import Header from './Header'
 import News from './News'
 
 class Main extends Component {

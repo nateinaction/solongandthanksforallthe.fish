@@ -11,4 +11,7 @@ This repository contains the code that runs [https://solongandthanksforallthe.fi
 Run `npm run start`
 
 ### Deployment
-Run `npm run deploy`
+```
+npm run build
+npm run deploy
+```

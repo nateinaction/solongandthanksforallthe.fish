@@ -12,8 +12,3 @@ Run `npm run start`
 
 ### Deployment
 Merge to `master` or:
-
-```
-npm run build
-npm run deploy
-```

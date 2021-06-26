@@ -13,14 +13,14 @@ class News extends Component {
   render() {
     if (!this.props.subreddits[this.props.subredditName] || this.props.subreddits[this.props.subredditName].fetching) {
       return (
-        <Col xs={12} className='loading'>
+        <Col xs={12} className='loading p-0'>
           {'Loading...'}
         </Col>
       )
     }
 
     return (
-      <Col xs={12} className='news'>
+      <Col xs={12} className='news p-0'>
         {this.props.subreddits[this.props.subredditName].posts.map((post, index) => (
           <NewsItem
             key={index}

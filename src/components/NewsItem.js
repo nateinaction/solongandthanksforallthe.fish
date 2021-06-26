@@ -37,13 +37,4 @@ const NewsItem = (props) => (
   </Row>
 )
 
-// NewsItem.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   thumbnail: PropTypes.string.isRequired,
-//   url: PropTypes.string.isRequired,
-//   discussion: PropTypes.string.isRequired,
-//   date: PropTypes.number.isRequired,
-//   numComments: PropTypes.number.isRequired
-// }
-
 export default NewsItem

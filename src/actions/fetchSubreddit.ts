@@ -15,13 +15,15 @@ const fetchSubreddit = (subreddit: string) => (
       }
     }
     return axios(url, config)
-			.then(res => (
-				dispatch(setSubreddit(subreddit, res.data.data.children))
-			))
-		  .catch(err => {
-				if (err) console.log(err)
-		  	return dispatch(setMessage(subreddit, 'Unable to connect to Reddit. Please check your internet connection.'))
-		  });
+      .then(res => (
+        dispatch(setSubreddit(subreddit, res.data.data.children.filter((post: { data: { stickied: boolean; }; }) => (
+          (!post.data.stickied)
+        )).slice(0, 5)))
+      ))
+      .catch(err => {
+        if (err) console.log(err)
+        return dispatch(setMessage(subreddit, 'Unable to connect to Reddit. Please check your internet connection.'))
+      });
   }
 )
 

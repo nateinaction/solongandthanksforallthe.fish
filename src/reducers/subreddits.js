@@ -6,7 +6,6 @@ const helper = (state, action) => {
 		[action.subreddit]: {
 			fetching,
 			posts,
-			message
 		}
 	})
 }

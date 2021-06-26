@@ -7,6 +7,9 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "csp-html-webpack-plugin": "^5.1.0",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.1.8",
     "react-scripts": "^4.0.3"
   },
   "dependencies": {
@@ -27,8 +30,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "lint": "node_modules/.bin/eslint ./src",
     "lintfix": "node_modules/.bin/eslint --fix ./src",
     "test": "react-scripts test --env=jsdom",

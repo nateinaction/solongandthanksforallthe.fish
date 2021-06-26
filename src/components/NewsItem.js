@@ -2,7 +2,6 @@ import React from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
 import moment from 'moment'
 
-import './NewsItem.css'
 import redditSelf from '../images/reddit-self.svg';
 import redditDefault from '../images/reddit-default.svg';
 

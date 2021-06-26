@@ -1,4 +1,4 @@
-const setFetching = (subreddit) => ({
+const setFetching = (subreddit: string) => ({
 	type: 'FETCHING',
   subreddit
 })

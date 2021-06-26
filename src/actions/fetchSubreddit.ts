@@ -4,8 +4,8 @@ import setFetching from './setFetching'
 import setSubreddit from './setSubreddit'
 import setMessage from './setMessage'
 
-const fetchSubreddit = (subreddit) => (
-  (dispatch) => {
+const fetchSubreddit = (subreddit: string) => (
+  (dispatch: any) => {
     dispatch(setFetching(subreddit))
 
     const url = `https://www.reddit.com/r/${subreddit}/hot.json`

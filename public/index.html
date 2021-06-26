@@ -1,14 +1,85 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Oxygen" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>So long and thanks for all the fish!</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Bangers|Oxygen" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <title>So long and thanks for all the fish!</title>
+  <style type="text/css">
+  h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+  }
+
+  /* Header */
+  .header {
+    padding: 2rem 0;
+  }
+
+  .no-padding {
+    padding: 0;
+  }
+
+  /* Main */
+  .main {
+    text-align: center;
+    background-color: #428ebd;
+    overflow: hidden;
+  }
+
+  /* News */
+  .news {
+    background-color: #eeeeee;
+    text-align: left;
+    padding: 1.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .news-item {
+    margin: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="header row">
+      <div class="no-padding col-12"><img src="%PUBLIC_URL%/dolphin.svg"></div>
+    </div>
+    <div class="news container">
+      <div class="section row">
+        <div class="col-12"><h2 class="section-title">Science</h2></div>
+        <div id="science"></div>
+      </div>
+      <div class="section row">
+        <div class="col-12"><h2 class="section-title">Space</h2></div>
+        <div id="space"></div>
+      </div>
+      <div class="section row">
+        <div class="col-12"><h2 class="section-title">Environment</h2></div>
+        <div id="environment"></div>
+      </div>
+      <div class="section row">
+        <div class="col-12"><h2 class="section-title">Earth Photography</h2></div>
+        <div id="askscience"></div>
+      </div>
+      <div class="section row">
+        <div class="col-12"><h2 class="section-title">Earth Photography</h2></div>
+        <div id="earthphotography"></div>
+      </div>
+      <div class="section row">
+        <div class="col-12"><h2 class="section-title">Humor</h2></div>
+        <div id="humor"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

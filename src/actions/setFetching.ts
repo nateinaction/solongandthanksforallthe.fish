@@ -1,5 +1,5 @@
 const setFetching = (subreddit: string) => ({
-	type: 'FETCHING',
+  type: 'FETCHING',
   subreddit
 })
 

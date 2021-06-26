@@ -1,5 +1,5 @@
 const setSubreddit = (subreddit: string, posts: any) => ({
-	type: 'SET_SUBREDDIT',
+  type: 'SET_SUBREDDIT',
   subreddit,
   posts
 })

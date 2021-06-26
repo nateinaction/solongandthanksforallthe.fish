@@ -13,12 +13,8 @@ const getThumbnail = (src) => {
   return src
 }
 
-const getDate = (epoch) => (
-  moment.utc(epoch * 1000).fromNow()
-)
-
 const NewsItem = (props) => (
-  <Row className='news-item' >
+  <Row className='news-item'>
     <Col xs={12} md={2} className='p-0'>
       <a target='_blank' rel='noopener noreferrer' href={props.url}>
         <Image src={getThumbnail(props.thumbnail)} className='center-block' thumbnail width="100%" />
@@ -27,9 +23,11 @@ const NewsItem = (props) => (
     <Col xs={12} md={10}>
       <p className='title'><a target='_blank' rel='noopener noreferrer' href={props.url}>{props.title}</a></p>
       <p>
-        <span className='date'>{'Posted ' + getDate(props.date)}</span>{' - '}
         <a className='discussion' target='_blank' rel='noopener noreferrer' href={'https://www.reddit.com' + props.discussion}>
-          Discussion ({props.numComments})
+          💬 Discuss ({props.numComments})
+        </a>{' - '}
+        <a className='share' onClick={() => navigator.share({ title: props.title, url: props.url })}>
+          📤 Share
         </a>
       </p>
     </Col>

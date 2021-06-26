@@ -1,7 +1,6 @@
-const helper = (state, action) => {
-	const message = action.message || ''
+const helper = (state: {}, action: { type: any; posts: never[]; subreddit: any }) => {
 	const posts = action.posts || []
-	const fetching = (posts.length === 0 && message.length === 0)
+	const fetching = (posts.length === 0)
 	return Object.assign({}, state, {
 		[action.subreddit]: {
 			fetching,
@@ -10,7 +9,7 @@ const helper = (state, action) => {
 	})
 }
 
-const subreddits = (state = {}, action) => {
+const subreddits = (state = {}, action: { type: any; posts: never[]; subreddit: any }) => {
 	switch (action.type) {
 		case 'FETCHING':
 		case 'SET_MESSAGE':

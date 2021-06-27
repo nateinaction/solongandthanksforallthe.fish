@@ -40,27 +40,36 @@ const Title = (props: { url: string; title: string; }) => (
 )
 
 const Discuss = (props: { discussionUrlPath: string; numComments: number; }) => (
-    <a className='discuss' target='_blank' rel='noopener noreferrer' href={`https://www.reddit.com${props.discussionUrlPath}`}>
-        {`💬 Discuss (${props.numComments})`}
-    </a>
+    <Col xs='auto'>
+        <a className='discuss' target='_blank' rel='noopener noreferrer' href={`https://www.reddit.com${props.discussionUrlPath}`}>
+            {`💬 Discuss (${props.numComments})`}
+        </a>
+    </Col>
 )
 
-const Share = (props: { title: string; url: string; }) => (
-    <a className='share' onClick={() => navigator.share({ title: props.title, url: props.url })}>
-        {'📤 Share'}
-    </a>
-)
+// Share creates a clickable element that brings up the native OS sharing menu
+const Share = (props: { title: string; url: string; }) => {
+    // Not all platforms support the Web Share API (like Chrome on Mac) https://caniuse.com/web-share
+    if (!!navigator.share) {
+        return (
+            <Col xs='auto'>
+                <a className='share' onClick={() => navigator.share({ title: props.title, url: props.url })}>
+                    {'📤 Share'}
+                </a>
+            </Col>
+        )
+    }
+    return <p/>
+}
 
-const Meta = (props: { discussionUrlPath: string; numComments: number; title: string; url: string }) => (
-    <Row className='article-meta'>
-        <Col xs='auto'>
+const Meta = (props: { discussionUrlPath: string; numComments: number; title: string; url: string }) => {
+    return (
+        <Row className='article-meta'>
             <Discuss discussionUrlPath={props.discussionUrlPath} numComments={props.numComments} />
-        </Col>
-        <Col xs='auto'>
             <Share title={props.title} url={props.url} />
-        </Col>
-    </Row>
-)
+        </Row>
+    )
+}
 
 const Article = (props: { url: string; thumbnail: string; title: string; discussion: string; numComments: number; }) => (
     <Row className='article'>

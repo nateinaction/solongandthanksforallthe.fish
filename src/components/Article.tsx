@@ -1,7 +1,6 @@
 import { Row, Col, Image } from 'react-bootstrap';
 import missingImage from '../images/missing.svg';
 import discussionImage from '../images/discussion.svg';
-import './Article.css';
 
 const getImage = (src: string) => {
     if (src === 'self' || src === '') {

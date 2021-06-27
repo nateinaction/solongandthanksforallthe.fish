@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-import setFetching from './setFetching'
-import setSubreddit from './setSubreddit'
-import setMessage from './setMessage'
+import setFetching from './setFetchingSubreddit'
+import setSubreddit from './setSubredditName'
 
 const fetchSubreddit = (subreddit: string) => (
   (dispatch: any) => {
@@ -22,7 +21,6 @@ const fetchSubreddit = (subreddit: string) => (
       ))
       .catch(err => {
         if (err) console.log(err)
-        return dispatch(setMessage(subreddit, 'Unable to connect to Reddit. Please check your internet connection.'))
       });
   }
 )

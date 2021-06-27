@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { Col } from 'react-bootstrap';
 
-import NewsItem from './NewsItem'
+import Article from './Article'
 import fetchSubreddit from '../actions/fetchSubreddit'
 
 class News extends Component {
@@ -20,15 +20,14 @@ class News extends Component {
     }
 
     return (
-      <Col xs={12} className='news p-0'>
+      <Col xs={12} className='p-0'>
         {this.props.subreddits[this.props.subredditName].posts.map((post, index) => (
-          <NewsItem
+          <Article
             key={index}
             title={post.data.title}
             thumbnail={post.data.thumbnail}
             url={post.data.url}
             discussion={post.data.permalink}
-            date={post.data.created_utc}
             numComments={post.data.num_comments} />
         ))}
       </Col>

@@ -1,0 +1,16 @@
+.article {
+    margin: 1.2rem;
+}
+
+.title {
+    font-size: 1.2rem;
+}
+
+.section-body {
+    min-width: 100%;
+}
+
+.article-image img {
+    margin-bottom: 1.2rem;
+    width: 150px;
+}

@@ -1,4 +1,4 @@
-import { ActionReducerMapBuilder, createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 interface newsState {
 	[index: string]: section;
@@ -8,7 +8,7 @@ interface section {
 	title: string;
 	isFetching: boolean;
 	articles: article[];
-};
+}
 
 interface articleData {
 	title: string;
@@ -20,7 +20,7 @@ interface articleData {
 
 interface article {
   data: articleData;
-};
+}
 
 const initialState: newsState = {
 	science: {
@@ -59,11 +59,6 @@ const initialState: newsState = {
 		articles: [],
 	},
 };
-
-interface setArticlesPayload {
-	subredditName: string,
-	articles: article[],
-}
 
 // fetchArticles Fetches the 5 most recent hot posts from a subreddit and dispatch an action
 export const fetchArticles = createAsyncThunk(

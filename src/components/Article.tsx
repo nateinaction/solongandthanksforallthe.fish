@@ -50,7 +50,7 @@ const Discuss = (props: { discussionUrlPath: string; numComments: number; }) => 
 // Share creates a clickable element that brings up the native OS sharing menu
 const Share = (props: { title: string; url: string; }) => {
     // Not all platforms support the Web Share API (like Chrome on Mac) https://caniuse.com/web-share
-    if (!!navigator.share) {
+    if (navigator.share) {
         return (
             <Col xs='auto'>
                 <a className='share' onClick={() => navigator.share({ title: props.title, url: props.url })}>
@@ -71,7 +71,7 @@ const Meta = (props: { discussionUrlPath: string; numComments: number; title: st
     )
 }
 
-const Article = (props: {article: articleData}) => (
+const Article = (props: {article: articleData}): JSX.Element => (
     <Row className='article'>
         <Col xs={12} md={2}>
             <Thumbnail url={props.article.url} thumbnail={props.article.thumbnail} />

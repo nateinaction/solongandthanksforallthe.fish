@@ -7,7 +7,7 @@ const Title = (props: { title: string }) => (
 	</h1>
 )
 
-const Section = (props: { section: section }) => {
+const Section = (props: { section: section }): JSX.Element => {
 	if (props.section.isFetching) {
     return (
       <div className={`section`}>

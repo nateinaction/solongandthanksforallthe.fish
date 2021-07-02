@@ -18,11 +18,7 @@ const cspAdditionalOpts = {
 }
 
 function addCspHtmlWebpackPlugin(config) {
-    // if(process.env.NODE_ENV === 'production') {
-    //     config.plugins.push(new CspHtmlWebpackPlugin(cspConfigPolicy, cspAdditionalOpts));
-    // }
     config.plugins.push(new CspHtmlWebpackPlugin(cspConfigPolicy, cspAdditionalOpts));
-
     return config;
 }
 

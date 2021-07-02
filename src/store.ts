@@ -1,22 +1,13 @@
-import { createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
+import { configureStore } from '@reduxjs/toolkit'
+import newsReducer from './store/newsReducer'
 
-import reducers from './reducers/main'
+import logger from 'redux-logger'
 
-/*
- * Redux Store
- */
+const store = configureStore({
+  reducer: newsReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+})
 
-let store = createStore(reducers, applyMiddleware(
-	thunk
-))
-
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
 export default store
-
-/*
- * Redux state to console log
- */
-
-console.log('initial state')
-console.log(store.getState())
-store.subscribe(() => console.log(store.getState()))

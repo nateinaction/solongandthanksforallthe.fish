@@ -1,6 +1,7 @@
 import { Row, Col, Image } from 'react-bootstrap';
 import missingImage from '../images/missing.svg';
 import discussionImage from '../images/discussion.svg';
+import type { articleData } from '../store/newsReducer'
 
 const getImage = (src: string) => {
     if (src === 'self' || src === '') {
@@ -70,14 +71,18 @@ const Meta = (props: { discussionUrlPath: string; numComments: number; title: st
     )
 }
 
-const Article = (props: { url: string; thumbnail: string; title: string; discussion: string; numComments: number; }) => (
+const Article = (props: {article: articleData}) => (
     <Row className='article'>
         <Col xs={12} md={2}>
-            <Thumbnail url={props.url} thumbnail={props.thumbnail} />
+            <Thumbnail url={props.article.url} thumbnail={props.article.thumbnail} />
         </Col>
         <Col xs={12} md={10}>
-            <Title url={props.url} title={props.title} />
-            <Meta discussionUrlPath={props.discussion} numComments={props.numComments} title={props.title} url={props.url} />
+            <Title url={props.article.url} title={props.article.title} />
+            <Meta 
+                discussionUrlPath={props.article.permalink}
+                numComments={props.article.num_comments}
+                title={props.article.title}
+                url={props.article.url} />
         </Col>
     </Row>
 )

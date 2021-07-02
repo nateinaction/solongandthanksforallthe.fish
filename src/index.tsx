@@ -1,36 +1,42 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import News from './components/News';
 import store from './store';
 
-const sections = document.getElementsByClassName('section-body');
-for (let i = 0; i < sections.length; i++) {
-  ReactDOM.render(
+import {fetchArticles} from './store/newsReducer'
+
+ReactDOM.render(
+  <React.StrictMode>
     <Provider store={store}>
-      <News subredditName={sections[i].id} />
-    </Provider>,
-    sections[i]
-  );
-}
+      <News/>
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('content')
+);
 
 // Toggle theme dark mode
-function enableDarkMode(enable: boolean) {
-  document.body.classList.toggle("dark-theme", enable);
+const toggleDarkMode = (forceEnable?: boolean) => {
+  document.body.classList.toggle("dark-theme", forceEnable);
 }
 
 // On page load, set the theme
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  enableDarkMode(true);
+  toggleDarkMode(true);
 } else {
-  enableDarkMode(false);
+  toggleDarkMode(false);
 }
 
 // On system change, update the theme
-window.matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', event => {
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
   if (event.matches) {
-    enableDarkMode(true);
+    toggleDarkMode(true);
   } else {
-    enableDarkMode(false);
+    toggleDarkMode(false);
   }
+})
+
+// Fetch articles
+Object.keys(store.getState()).map((sectionName: string) => {
+  store.dispatch(fetchArticles(sectionName))
 })
